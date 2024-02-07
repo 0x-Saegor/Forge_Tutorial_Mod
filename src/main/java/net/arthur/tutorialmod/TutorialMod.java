@@ -31,7 +31,7 @@ public class TutorialMod
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab test
+        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
     }
 
