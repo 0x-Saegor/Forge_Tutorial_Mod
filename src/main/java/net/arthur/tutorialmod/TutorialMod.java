@@ -18,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // Tutorial link : https://www.youtube.com/watch?v=C_VO6tD6Y1g&ab_channel=ModdingbyKaupenjoe
+// https://www.youtube.com/watch?v=-8-ntFoljy8&ab_channel=ModdingbyKaupenjoe
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
