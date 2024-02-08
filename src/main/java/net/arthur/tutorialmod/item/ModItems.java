@@ -1,6 +1,7 @@
 package net.arthur.tutorialmod.item;
 
 import net.arthur.tutorialmod.TutorialMod;
+import net.arthur.tutorialmod.item.custom.FuelItem;
 import net.arthur.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,9 @@ public class ModItems {
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+
+    public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
+            () -> new FuelItem(new Item.Properties(), 400));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
