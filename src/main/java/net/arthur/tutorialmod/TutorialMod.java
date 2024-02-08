@@ -1,6 +1,7 @@
 package net.arthur.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.arthur.tutorialmod.block.ModBlocks;
 import net.arthur.tutorialmod.item.ModCreativeModTabs;
 import net.arthur.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -10,13 +11,13 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+// Tutorial link : https://www.youtube.com/watch?v=C_VO6tD6Y1g&ab_channel=ModdingbyKaupenjoe
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
@@ -33,9 +34,9 @@ public class TutorialMod
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
