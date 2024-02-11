@@ -21,6 +21,7 @@
   "block.tutorialmod.sapphire_wall": "Sapphire Wall",
   "block.tutorialmod.sapphire_door": "Sapphire Door",
   "block.tutorialmod.sapphire_trapdoor": "Sapphire Trapdoor",
+  "item.tutorialmod.sapphire_staff": "Sapphire Staff",
 
   "tooltip.tutorialmod.metal_detector_tooltip": "Finds valuables underground",
   "creativetab.tutorial_tab" : "Sapphire Tutorial Tab"
