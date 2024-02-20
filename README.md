@@ -25,3 +25,4 @@ Ce mod est en cours de développement et il est probable que des améliorations 
 ## Mises à jour futures
 Implémenter des mobs, des biomes et une dimension.
  
+Source des tutoriels : Kaupenjoe
