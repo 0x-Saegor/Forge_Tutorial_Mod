@@ -20,24 +20,27 @@ public class AddItemModifier extends LootModifier {
             -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
             .fieldOf("item").forGetter(m -> m.item)).apply(inst, AddItemModifier::new)));
     private final Item item;
+
     public AddItemModifier(LootItemCondition[] conditionsIn, Item item) {
         super(conditionsIn);
         this.item = item;
     }
 
     @Override
-    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext lootContext) {
-        for(LootItemCondition condition : this.conditions){
-            if(!condition.test(lootContext)){
+    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
+        for(LootItemCondition condition : this.conditions) {
+            if(!condition.test(context)) {
                 return generatedLoot;
             }
         }
+
         generatedLoot.add(new ItemStack(this.item));
+
         return generatedLoot;
     }
 
     @Override
     public Codec<? extends IGlobalLootModifier> codec() {
-        return null;
+        return CODEC.get();
     }
 }
