@@ -18,6 +18,7 @@ Ce mod est en cours de développement et il est probable que des améliorations 
     Cuisson du Sapphire Brut
     Baton de foudre
     Fraise à manger
+    Graines de plants de fraise
     Pomme de pin servant à faire cuire
     Outils
 
