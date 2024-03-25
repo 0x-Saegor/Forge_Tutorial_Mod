@@ -1,6 +1,7 @@
 package net.arthur.tutorialmod.item;
 
 import net.arthur.tutorialmod.TutorialMod;
+import net.arthur.tutorialmod.block.ModBlocks;
 import net.arthur.tutorialmod.item.custom.FuelItem;
 import net.arthur.tutorialmod.item.custom.LightningStaff;
 import net.arthur.tutorialmod.item.custom.MetalDetectorItem;
@@ -51,6 +52,9 @@ public class ModItems {
         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(),new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
