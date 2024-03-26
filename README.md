@@ -19,6 +19,8 @@ Ce mod est en cours de développement et il est probable que des améliorations 
     Baton de foudre
     Fraise à manger
     Graines de plants de fraise
+    Maïs
+    Graines de plants de maïs
     Pomme de pin servant à faire cuire
     Outils
 
