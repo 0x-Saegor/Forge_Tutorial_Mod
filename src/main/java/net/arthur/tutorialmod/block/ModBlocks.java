@@ -1,6 +1,7 @@
 package net.arthur.tutorialmod.block;
 
 import net.arthur.tutorialmod.TutorialMod;
+import net.arthur.tutorialmod.block.custom.CornCropBlock;
 import net.arthur.tutorialmod.block.custom.SoundBlock;
 import net.arthur.tutorialmod.block.custom.StrawberryCropBlock;
 import net.arthur.tutorialmod.item.ModItems;
@@ -70,6 +71,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

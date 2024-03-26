@@ -25,6 +25,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.PINE_CONE.get());
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+                        pOutput.accept(ModItems.CORN.get());
+                        pOutput.accept(ModItems.CORN_SEEDS.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
