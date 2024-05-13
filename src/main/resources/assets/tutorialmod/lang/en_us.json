@@ -41,6 +41,8 @@
   "block.tutorialmod.sapphire_trapdoor": "Sapphire Trapdoor",
 
   "tooltip.tutorialmod.metal_detector_tooltip": "Finds valuables underground",
-  "creativetab.tutorial_tab" : "Sapphire Tutorial Tab"
+  "block.tutorialmod.catmint": "Catmint",
 
+
+  "creativetab.tutorial_tab" : "Sapphire Tutorial Tab"
 }
