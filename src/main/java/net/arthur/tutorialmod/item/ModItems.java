@@ -2,12 +2,14 @@ package net.arthur.tutorialmod.item;
 
 import net.arthur.tutorialmod.TutorialMod;
 import net.arthur.tutorialmod.block.ModBlocks;
+import net.arthur.tutorialmod.entity.ModEntitites;
 import net.arthur.tutorialmod.item.custom.FuelItem;
 import net.arthur.tutorialmod.item.custom.LightningStaff;
 import net.arthur.tutorialmod.item.custom.MetalDetectorItem;
 import net.arthur.tutorialmod.item.custom.ModArmorItem;
 import net.arthur.tutorialmod.sound.ModSounds;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -63,6 +65,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
             () -> new RecordItem(6, ModSounds.BAR_BRAWL, new Item.Properties().stacksTo(1), 3660));
+
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntitites.RHINO, 0x7e9680, 0xc5d1c5,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

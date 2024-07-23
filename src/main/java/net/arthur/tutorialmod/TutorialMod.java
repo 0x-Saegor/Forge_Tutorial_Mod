@@ -2,11 +2,15 @@ package net.arthur.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.arthur.tutorialmod.block.ModBlocks;
+import net.arthur.tutorialmod.entity.ModEntitites;
+import net.arthur.tutorialmod.entity.client.RhinoRenderer;
 import net.arthur.tutorialmod.item.ModCreativeModTabs;
 import net.arthur.tutorialmod.item.ModItems;
 import net.arthur.tutorialmod.loot.ModLootModifiers;
 import net.arthur.tutorialmod.sound.ModSounds;
 import net.arthur.tutorialmod.villager.ModVillagers;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -50,6 +54,8 @@ public class TutorialMod
 
         ModSounds.register(modEventBus);
 
+        ModEntitites.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -87,7 +93,7 @@ public class TutorialMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntitites.RHINO.get(), RhinoRenderer::new);
         }
     }
 }
